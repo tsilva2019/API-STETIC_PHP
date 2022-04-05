@@ -1,0 +1,97 @@
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+
+profissionais:
+    path: /profissionais
+    controller: App\Controller\ProfissionalController::buscarTodos
+    methods:
+        - GET
+
+profissional:
+    path: /profissionais/{id}
+    controller: App\Controller\ProfissionalController::buscarPorId
+    methods:
+        - GET
+
+novo_profissional:
+    path: /profissionais
+    controller: App\Controller\ProfissionalController::novo
+    methods:
+        - POST
+
+atualiza_profissional:
+    path: /profissionais/{id}
+    controller: App\Controller\ProfissionalController::atualiza
+    methods:
+        - PUT
+
+remove_profissionais:
+    path: /profissionais/{id}
+    controller: App\Controller\ProfissionalController::remover
+    methods:
+        - DELETE
+
+especialidades:
+    path: /especialidades
+    controller: App\Controller\EspecialidadesController::buscarTodos
+    methods:
+        - GET
+
+especialidade:
+    path: /especialidades/{id}
+    controller: App\Controller\EspecialidadesController::buscarPorId
+    methods:
+        - GET
+
+nova_especialidade:
+    path: /especialidades
+    controller: App\Controller\EspecialidadesController::novo
+    methods:
+        - POST
+
+atualiza_especialidade:
+    path: /especialidades/{id}
+    controller: App\Controller\EspecialidadesController::atualiza
+    methods:
+        - PUT
+
+remove_especialidade:
+    path: /especialidades/{id}
+    controller: App\Controller\EspecialidadesController::remover
+    methods:
+        - DELETE
+
+usuarios:
+    path: /usuarios
+    controller: App\Controller\UsuarioController::buscarTodos
+    methods:
+        - GET
+
+usuario:
+    path: /usuarios/{id}
+    controller: App\Controller\UsuarioController::buscarPorId
+    methods:
+        - GET
+
+novo_usuario:
+    path: /usuarios
+    controller: App\Controller\UsuarioController::novo
+    methods:
+        - POST
+
+atualiza_usuario:
+    path: /usuarios/{id}
+    controller: App\Controller\UsuarioController::atualiza
+    methods:
+        - PUT
+
+remove_usuario:
+    path: /usuarios/{id}
+    controller: App\Controller\UsuarioController::remover
+    methods:
+        - DELETE
